@@ -29,3 +29,22 @@ server:
       afterMiddleware: compression
       configuration:
         ignoreCertErrors: false # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
+        backend:
+          - path: /sap
+            url: https://my402868-api.s4hana.cloud.sap
+            destination: ACCOUNTING_ACTIVITY_ALLOCATION
+    - name: sap-fe-mockserver
+      beforeMiddleware: csp
+      configuration:
+        mountPath: /
+        services:
+          - urlPath: /sap/opu/odata4/sap/api_drctactivityallocation/srvd_a2x/sap/directactivityallocation/0001
+            metadataPath: ./webapp/localService/mainService/metadata.xml
+            mockdataPath: ./webapp/localService/mainService/data
+            generateMockData: true
+        annotations: []
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**

@@ -22,11 +22,15 @@
             <ToolbarSpacer id="_IDGenToolbarSpacer3" />
             <Button
                 id="_IDGenButton4"
-                text="Hi, {/username}"
+                text="Hi, {oUserModel>/username}"
                 type="Transparent"
             />
         </Toolbar>
-        <Text id="_IDGenText6" text="{/password}"></Text>
+        
+        <List id="_IDGenList1" items="{/ActivityAllocation}" >
+            <StandardListItem id="_IDGenStandardListItem" type="Active" title="{FiscalYear}"></StandardListItem>
+        </List>
+
         <footer>
             <Bar id="_IDGenBar2">
                 <contentLeft>
