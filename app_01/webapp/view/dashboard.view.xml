@@ -1,0 +1,12 @@
+<mvc:View
+    controllerName="app01.controller.home_view"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:tnt="sap.tnt"
+>
+    <Page id="_IDGenPage1"
+        title="{i18n>title}"
+    >
+        <Text id="_IDGenText" text="This is second page"></Text>
+    </Page>
+</mvc:View>

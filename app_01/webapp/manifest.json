@@ -79,12 +79,23 @@
           "target": [
             "Targethome_view"
           ]
+        },
+        {
+          "name": "RouteDashboard",
+          "pattern": "list",
+          "target": [
+            "TargetRouteDashboard"
+          ]
         }
       ],
       "targets": {
         "Targethome_view": {
           "id": "home_view",
           "name": "home_view"
+        },
+        "TargetRouteDashboard": {
+          "id": "dashboard",
+          "name": "dashboard"
         }
       }
     },

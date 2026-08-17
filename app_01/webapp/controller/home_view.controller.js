@@ -3,11 +3,13 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], (Controller) => {
 
   return Controller.extend("app01.controller.home_view", {
     onInit() {},
-    alertButton: function () {
-      let username = this.getView().byId("_username").getValue();
-      let password = this.getView().byId("_password").getValue();
+    loginButton: function () {
+      //   let username = this.getView().byId("_username").getValue();
+      //   let password = this.getView().byId("_password").getValue();
 
-      alert(`Username: ${username}\n Password: ${password}`);
+      //alert(`Username: ${username}\n Password: ${password}`);
+      var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+      oRouter.navTo("RouteDashboard");
     },
   });
 });
