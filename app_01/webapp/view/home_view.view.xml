@@ -8,7 +8,7 @@
         id="page"
         title="{i18n>title}"
     >
-        <tnt:ToolHeader id="toolHeader">
+        <Toolbar id="_IDGenToolbar">
             <Button
                 id="_IDGenButton"
                 icon="sap-icon://menu2"
@@ -25,11 +25,46 @@
                 text="Hi, Admin"
                 type="Transparent"
             />
-        </tnt:ToolHeader>
-        <Text
-            id="_IDGenText"
-            text="Hello World"
-        />
+        </Toolbar>
+        <content>
+            <VBox
+                id="_IDGenVBox1"
+                class="custform"
+                fitContainer="true"
+            >
+                <form:SimpleForm
+                    id="_IDGenSimpleForm"
+                    title="Login Form"
+                    editable="true"
+                    layout="ResponsiveGridLayout"
+                    xmlns:form="sap.ui.layout.form"
+                >
+                    <Label
+                        id="_IDGenLabel"
+                        text="Username"
+                    />
+                    <Input
+                        id="_username"
+                        placeholder="Enter your username"
+                    />
+                    <Label
+                        id="_IDGenLabel1"
+                        text="Password"
+                    />
+                    <Input
+                        id="_password"
+                        type="Password"
+                        placeholder="Enter your password"
+                    />
+                    <Button
+                        id="_IDGenButton2"
+                        text="Login"
+                        type="Emphasized"
+                        press="alertButton()"
+                    />
+                </form:SimpleForm>
+            </VBox>
+        </content>
         <footer>
             <Bar id="_IDGenBar1">
                 <contentLeft>
