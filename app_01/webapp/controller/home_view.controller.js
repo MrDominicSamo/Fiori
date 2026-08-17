@@ -25,7 +25,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], (Controller) => {
       var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
       oRouter.navTo("RouteDashboard", {
         name: username,
-        pass: password
+        pass: password,
       });
     },
   });
