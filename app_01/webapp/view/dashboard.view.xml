@@ -4,9 +4,44 @@
     xmlns="sap.m"
     xmlns:tnt="sap.tnt"
 >
-    <Page id="_IDGenPage1"
+    <Page
+        id="_IDGenPage1"
         title="{i18n>title}"
     >
-        <Text id="_IDGenText" text="This is second page"></Text>
+        <Toolbar id="_IDGenToolbar2">
+            <Button
+                id="_IDGenButton3"
+                icon="sap-icon://menu2"
+                type="Transparent"
+            />
+            <ToolbarSpacer id="_IDGenToolbarSpacer1" />
+            <Text
+                id="_IDGenText"
+                text="Login Page"
+            />
+            <ToolbarSpacer id="_IDGenToolbarSpacer3" />
+            <Button
+                id="_IDGenButton4"
+                text="Hi, {/username}"
+                type="Transparent"
+            />
+        </Toolbar>
+        <Text id="_IDGenText6" text="{/password}"></Text>
+        <footer>
+            <Bar id="_IDGenBar2">
+                <contentLeft>
+                    <Text
+                        id="_IDGenText4"
+                        text="Copyright@Dominic Samo"
+                    />
+                </contentLeft>
+                <contentRight>
+                    <Text
+                        id="_IDGenText5"
+                        text="2026"
+                    />
+                </contentRight>
+            </Bar>
+        </footer>
     </Page>
 </mvc:View>

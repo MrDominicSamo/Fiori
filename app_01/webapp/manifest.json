@@ -82,7 +82,7 @@
         },
         {
           "name": "RouteDashboard",
-          "pattern": "list",
+          "pattern": "list/{name}/{pass}",
           "target": [
             "TargetRouteDashboard"
           ]
