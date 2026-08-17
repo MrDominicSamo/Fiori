@@ -1,0 +1,12 @@
+<mvc:View controllerName="app01.controller.home_view"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" xmlns:tnt="sap.tnt">
+    <Page id="page" title="{i18n>title}">
+    <tnt:ToolHeader id="toolHeader">
+    <Button id="_IDGenButton" icon="sap-icon://menu2" type="Transparent" />
+    <ToolbarSpacer id="_IDGenToolbarSpacer" />
+    <Text id="_IDGenText1" text="Login Page"></Text>
+    </tnt:ToolHeader>
+        <Text id="_IDGenText" text="Hello World"></Text>
+    </Page>
+</mvc:View>
