@@ -17,13 +17,14 @@
             <ToolbarSpacer id="_IDGenToolbarSpacer1" />
             <Text
                 id="_IDGenText"
-                text="Login Page"
+                text="Data Page"
             />
             <ToolbarSpacer id="_IDGenToolbarSpacer3" />
             <Button
-                id="_IDGenButton4"
+                id="profile_button"
                 text="Hi, {oUserModel>/username}"
                 type="Transparent"
+                press=".profile_dropdown"
             />
         </Toolbar>
 

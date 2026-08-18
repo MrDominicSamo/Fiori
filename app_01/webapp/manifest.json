@@ -114,8 +114,8 @@
           "name": "home_view"
         },
         "TargetRouteDashboard": {
-          "id": "dashboard",
-          "name": "dashboard"
+          "id": "list_view",
+          "name": "list_view"
         }
       }
     },

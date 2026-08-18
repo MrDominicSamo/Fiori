@@ -1,0 +1,23 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+    <Menu id="_IDGenMenu1">
+        <MenuItem
+            id="_IDGenMenuItem"
+            text="My Profile"
+            icon="sap-icon://customer"
+        />
+        <MenuItem
+            id="_IDGenMenuItem1"
+            text="Properties"
+            icon="sap-icon://action-settings"
+        />
+        <MenuItem
+            id="_IDGenMenuItem2"
+            text="Logout"
+            icon="sap-icon://decline"
+            press=".logout"
+        />
+    </Menu>
+</core:FragmentDefinition>

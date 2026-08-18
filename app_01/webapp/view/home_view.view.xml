@@ -60,7 +60,7 @@
                         id="_IDGenButton2"
                         text="Login"
                         type="Emphasized"
-                        press="loginButton()"
+                        press="onNavigateToList()"
                     />
                 </form:SimpleForm>
             </VBox>
