@@ -1,0 +1,61 @@
+<mvc:View
+    controllerName="bookshopui.controller.BookDetail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+>
+    <Page
+        id="_IDGenPage1"
+        title="{title}"
+        showNavButton="true"
+        navButtonPress="onNavBack"
+    >
+        <content>
+            <VBox
+                id="_IDGenVBox"
+                class="sapUiMediumMargin"
+            >
+                <Label
+                    id="_IDGenLabel"
+                    text="{i18n>colAuthor}"
+                />
+                <Text
+                    id="_IDGenText5"
+                    text="{author}"
+                />
+                <Label
+                    id="_IDGenLabel1"
+                    text="{i18n>colPrice}"
+                    class="sapUiTinyMarginTop"
+                />
+                <ObjectNumber
+                    id="_IDGenObjectNumber1"
+                    number="{
+                        parts: [
+                        { path: 'price' },
+                        { path: 'currency_code' }
+                        ],
+                        type: 'sap.ui.model.type.Currency'
+                    }"
+                                    />
+                <Label
+                    id="_IDGenLabel2"
+                    text="{i18n>colStock}"
+                    class="sapUiTinyMarginTop"
+                />
+                <Text
+                    id="_IDGenText6"
+                    text="{stock}"
+                />
+                <Label
+                    id="_IDGenLabel3"
+                    text="Description"
+                    class="sapUiTinyMarginTop"
+                />
+                <Text
+                    id="_IDGenText7"
+                    text="{descr}"
+                />
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

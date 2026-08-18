@@ -1,0 +1,76 @@
+<mvc:View
+    controllerName="bookshopui.controller.BookList"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <Table
+                id="bookTable"
+                items="{ 
+            path: '/Books',
+            parameters: { $select: 'ID,title,author,price,currency_code,stock' }
+         }"
+                growing="true"
+                growingThreshold="20"
+            >
+                <columns>
+                    <Column id="_IDGenColumn1">
+                        <Text
+                            id="_IDGenText"
+                            text="{i18n>colTitle}"
+                        />
+                    </Column>
+                    <Column id="_IDGenColumn2">
+                        <Text
+                            id="_IDGenText1"
+                            text="{i18n>colAuthor}"
+                        />
+                    </Column>
+                    <Column
+                        id="_IDGenColumn3"
+                        hAlign="End"
+                    >
+                        <Text
+                            id="_IDGenText2"
+                            text="{i18n>colPrice}"
+                        />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem
+                        id="_IDGenColumnListItem1"
+                        type="Navigation"
+                        press="onBookPress"
+                    >
+                        <cells>
+                            <Text
+                                id="_IDGenText3"
+                                text="{title}"
+                            />
+                            <Text
+                                id="_IDGenText4"
+                                text="{author}"
+                            />
+                            <ObjectNumber
+                                id="_IDGenObjectNumber"
+                                number="{
+                                    parts: [
+                                    { path: 'price' },
+                                    { path: 'currency_code' }
+                                    ],
+                                    type: 'sap.ui.model.type.Currency',
+                                    formatOptions: { showMeasure: false }
+                                }"
+                            />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>
