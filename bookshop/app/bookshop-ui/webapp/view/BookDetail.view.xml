@@ -9,6 +9,15 @@
         showNavButton="true"
         navButtonPress="onNavBack"
     >
+      <Toolbar id="_IDGenToolbar" >
+        <Button
+            id="_IDGenButton"
+            text="Increase Stock"
+            type="Emphasized"
+            press="onIncreaseStock"
+            
+        />
+      </Toolbar>
         <content>
             <VBox
                 id="_IDGenVBox"
@@ -36,7 +45,7 @@
                         ],
                         type: 'sap.ui.model.type.Currency'
                     }"
-                                    />
+                />
                 <Label
                     id="_IDGenLabel2"
                     text="{i18n>colStock}"

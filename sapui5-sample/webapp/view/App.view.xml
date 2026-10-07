@@ -1,0 +1,25 @@
+<mvc:View controllerName="sap.ui.demo.tiles.controller.App"
+xmlns:f="sap.f" xmlns:m="sap.m" xmlns:mvc="sap.ui.core.mvc">
+    <f:ShellBar
+        title="Employee Dashboard"
+        homeIcon="https://ui5.sap.com/resources/sap/ui/documentation/sdk/images/logo_sap.png"
+        showCopilot="false"
+        showSearch="true"
+        showNotifications="true"
+        notificationsNumber="8">
+        <f:profile>
+            <m:Avatar initials="DS"/>
+        </f:profile>
+    </f:ShellBar>
+    <m:GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Documents Submitted"
+                    subheader="" press="onPress" >
+        <m:TileContent footer="Deadline: 2 Weeks">
+            <m:NumericContent value="50%" valueColor="Critical"  withMargin="false" icon="sap-icon://documents"/>
+        </m:TileContent>
+    </m:GenericTile>
+    <m:GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Pending Tasks" press="press">
+        <m:TileContent footer="Today">
+            <m:NumericContent value="3" valueColor="Good" withMargin="false" />
+        </m:TileContent>
+    </m:GenericTile>
+</mvc:View>

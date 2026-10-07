@@ -11,5 +11,21 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], (Controller) => {
         bookID: sBookID,
       });
     },
+    // Creating a new entity (e.g. from a "Create Book" dialog)
+    onCreateBook: function () {
+      const oListBinding = this.byId("bookTable").getBinding("items");
+      const oContext = oListBinding.create({
+        title: "New Book",
+        author: "Unknown",
+        price: 0,
+        stock: 0
+      });
+
+      oContext.created().then(() => {
+        sap.m.MessageToast.show("Book created");
+      }).catch((oError) => {
+        sap.m.MessageBox.error("Creation failed: " + oError.message);
+      });
+    }
   });
 });

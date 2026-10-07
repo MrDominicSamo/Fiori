@@ -1,0 +1,13 @@
+{
+  "name": "sap-ui-comp-sample-smarttable-smart-m-table-with-criticality",
+  "version": "1.0.0",
+  "author": "SAP SE",
+  "description": "Sample: Smart (Responsive) Table with Criticality",
+  "scripts": {
+    "start": "ui5 serve",
+    "build": "ui5 build"
+  },
+  "dependencies": {
+    "@ui5/cli": "^4.0.70"
+  }
+}

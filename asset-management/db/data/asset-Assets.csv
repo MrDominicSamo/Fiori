@@ -1,0 +1,14 @@
+ID,name,category,location,status,assignedTo
+AST001,Laptop 001,Computer,New York,Available,
+AST002,Monitor 001,Display,London,Assigned,Alice Johnson
+AST003,Keyboard 001,Peripheral,Berlin,Available,
+AST004,Mouse 001,Peripheral,Paris,Maintenance,
+AST005,Printer 001,Printer,Tokyo,Assigned,Bob Smith
+AST006,Desk 001,Furniture,Sydney,Available,
+AST007,Chair 001,Furniture,Toronto,Assigned,Carol Williams
+AST008,Projector 001,Presentation,Chicago,Available,
+AST009,Tablet 001,Mobile,San Francisco,Assigned,David Brown
+AST010,Phone 001,Mobile,Seattle,Maintenance,
+AST011,Router 001,Networking,Miami,Available,
+AST012,Server 001,Hardware,Amsterdam,Assigned,Eve Davis
+AST013,Scanner 001,Peripheral,Oslo,Available,

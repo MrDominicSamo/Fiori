@@ -20,5 +20,28 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
     onNavBack: function () {
       this.getOwnerComponent().getRouter().navTo("list");
     },
+
+    // Update Stock
+    onIncreaseStock: function () {
+      const oContext = this.getView().getBindingContext();
+      const iCurrentStock = oContext.getProperty("stock");
+
+      oContext.setProperty("stock", iCurrentStock + 1);
+
+      oContext
+        .getModel()
+        .submitBatch("$auto")
+        .then(() => {
+          sap.m.MessageToast.show(
+            this.getView()
+              .getModel("i18n")
+              .getResourceBundle()
+              .getText("stockUpdated"),
+          );
+        })
+        .catch((oError) => {
+          sap.m.MessageBox.error(oError.message);
+        });
+    },
   });
 });

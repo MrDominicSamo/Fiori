@@ -1,0 +1,261 @@
+<mvc:View
+    controllerName="assetlist.controller.AssetList"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+
+    <Page id="_IDGenPage2"
+        title="{i18n>title}"
+        class="sapUiContentPadding">
+
+        <content >
+
+            <VBox id="_IDGenVBox2"
+                class="sapUiMediumMargin"
+                width="100%">
+
+                <!-- Header -->
+
+                <Title id="_IDGenTitle"
+                    text="Asset Management"
+                    level="H2" />
+
+                <Text id="_IDGenText"
+                    text="Manage and track company assets"
+                    class="sapUiTinyMarginBottom" />
+
+                <!-- KPI Section -->
+
+                <HBox id="_IDGenHBox"
+                    wrap="Wrap"
+                    justifyContent="SpaceBetween"
+                    class="sapUiMediumMarginTop sapUiSmallMarginBottom">
+
+                    <GenericTile id="_IDGenGenericTile"
+                        width="15rem"
+                        header="Total Assets"
+                        frameType="OneByHalf">
+
+                        <TileContent id="_IDGenTileContent">
+                            <NumericContent id="_IDGenNumericContent"
+                                value="{dashboard>/totalAssets}" />
+                        </TileContent>
+
+                    </GenericTile>
+
+                    <GenericTile id="_IDGenGenericTile1"
+                        width="15rem"
+                        header="Available Assets"
+                        frameType="OneByHalf">
+
+                        <TileContent id="_IDGenTileContent1">
+                            <NumericContent id="_IDGenNumericContent1"
+                                value="{dashboard>/availableAssets}"
+                                valueColor="Good" />
+                        </TileContent>
+
+                    </GenericTile>
+
+                    <GenericTile id="_IDGenGenericTile2"
+                        width="15rem"
+                        header="Assigned Assets"
+                        frameType="OneByHalf">
+
+                        <TileContent id="_IDGenTileContent2">
+                            <NumericContent id="_IDGenNumericContent2"
+                                value="{dashboard>/assignedAssets}"
+                                valueColor="Critical" />
+                        </TileContent>
+
+                    </GenericTile>
+
+                    <GenericTile id="_IDGenGenericTile4"
+                        width="15rem"
+                        header="Assets Maintenance"
+                        frameType="OneByHalf">
+
+                        <TileContent id="_IDGenTileContent3">
+                            <NumericContent id="_IDGenNumericContent3"
+                                value="{dashboard>/inMaintenanceAssets}"
+                                valueColor="Critical" />
+                        </TileContent>
+
+                    </GenericTile>
+
+                </HBox>
+
+                <!-- Filter Toolbar -->
+
+                <OverflowToolbar id="_IDGenToolbar">
+
+                    <SearchField id="_IDGenSearchField"
+                        width="16rem"
+                        placeholder="Search assets"
+                        liveChange=".onSearch" />
+
+                    <ToolbarSpacer id="_IDGenToolbarSpacer" />
+
+                    <Label id="_IDGenLabel6" text="Status" />
+
+                    <Select id="_IDGenSelect"
+                        width="9rem"
+                        change=".onStatusFilter">
+
+                        <items>
+
+                            <core:Item id="_IDGenItem"
+                                key=""
+                                text="All" />
+
+                            <core:Item id="_IDGenItem1"
+                                key="Available"
+                                text="Available" />
+
+                            <core:Item id="_IDGenItem2"
+                                key="Assigned"
+                                text="Assigned" />
+
+                        </items>
+
+                    </Select>
+
+                    <Label id="_IDGenLabel7" text="Category" />
+
+                    <Select id="_IDGenSelect1"
+                        width="9rem"
+                        change=".onCategoryFilter">
+
+                        <items>
+
+                            <core:Item id="_IDGenItem3"
+                                key=""
+                                text="All" />
+
+                            <core:Item id="_IDGenItem4"
+                                key="Computer"
+                                text="Computer" />
+
+                            <core:Item id="_IDGenItem5"
+                                key="Display"
+                                text="Display" />
+
+                            <core:Item id="_IDGenItem6"
+                                key="Peripheral"
+                                text="Peripheral" />
+
+                            <core:Item id="_IDGenItem7"
+                                key="Presentation"
+                                text="Presentation" />
+
+                        </items>
+
+                    </Select>
+
+                    <Button id="_IDGenButton1"
+                        text="{i18n>add}"
+                        icon="sap-icon://add"
+                        type="Emphasized"
+                        press=".onAddPress" />
+
+                </OverflowToolbar>
+
+                <!-- Asset Table -->
+
+                <Table
+                    id="assetTable"
+                    width="100%"
+                    inset="false"
+                    growing="true"
+                    growingScrollToLoad="true"
+                    sticky="ColumnHeaders"
+                    items="{/Assets}">
+
+                    <headerToolbar>
+
+                        <Toolbar id="_IDGenToolbar1">
+
+                            <Title id="_IDGenTitle4"
+                                text="Assets"
+                                level="H4" />
+
+                            <ToolbarSpacer id="_IDGenToolbarSpacer1" />
+
+                            <Button id="_IDGenButton3"
+                                icon="sap-icon://refresh"
+                                tooltip="Refresh"
+                                press=".onRefresh" />
+
+                        </Toolbar>
+
+                    </headerToolbar>
+
+                    <columns>
+
+                        <Column id="_IDGenColumn" width="8rem">
+                            <Text id="_IDGenText1" text="ID" />
+                        </Column>
+
+                        <Column id="_IDGenColumn1">
+                            <Text id="_IDGenText2" text="Asset Name" />
+                        </Column>
+
+                        <Column id="_IDGenColumn2">
+                            <Text id="_IDGenText3" text="Category" />
+                        </Column>
+
+                        <Column id="_IDGenColumn3"
+                            minScreenWidth="Tablet">
+                            <Text id="_IDGenText4" text="Location" />
+                        </Column>
+
+                        <Column id="_IDGenColumn4" width="10rem">
+                            <Text id="_IDGenText5" text="Status" />
+                        </Column>
+
+                    </columns>
+
+                    <items>
+
+                        <ColumnListItem id="_IDGenColumnListItem"
+                            type="Navigation"
+                            press=".onAssetPress">
+
+                            <cells>
+
+                                <ObjectIdentifier id="_IDGenObjectIdentifier2"
+                                    title="{ID}" />
+
+                                <ObjectIdentifier id="_IDGenObjectIdentifier3"
+                                    title="{name}" />
+
+                                <Text id="_IDGenText6"
+                                    text="{category}" />
+
+                                <Text id="_IDGenText7"
+                                    text="{location}" />
+
+                                <ObjectStatus id="_IDGenObjectStatus2"
+                                    text="{status}"
+                                    state="{=
+                                        ${status} === 'Available'
+                                        ? 'Success'
+                                        : ${status} === 'Assigned'
+                                        ? 'Warning'
+                                        : 'Error'
+                                    }" />
+
+                            </cells>
+
+                        </ColumnListItem>
+
+                    </items>
+
+                </Table>
+
+            </VBox>
+
+        </content>
+
+    </Page>
+
+</mvc:View>

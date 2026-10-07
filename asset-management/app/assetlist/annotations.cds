@@ -1,0 +1,1 @@
+using AssetService as service from '../../srv/asset-service';
