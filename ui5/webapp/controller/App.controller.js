@@ -1,11 +1,30 @@
-sap.ui.define([
-    "sap/ui/core/mvc/Controller"
-], function(Controller) {
+sap.ui.define(
+  [
+    "sap/ui/core/mvc/Controller",
+    "sap/m/MessageToast",
+    "sap/ui/model/json/JSONModel",
+  ],
+  function (Controller, MessageToast, JSONModel) {
     "use strict";
 
     return Controller.extend("sap.ui.demo.walkthrough.controller.App", {
-        onPress: function() {
-            alert("Button pressed!");
-        }
+
+      onInit: function () {
+        
+        var oData = {
+            recipient: {
+                name: "World"
+            }
+        };
+
+        var oModel = new JSONModel(oData);
+        this.getView().setModel(oModel);
+        
+      },
+
+      onPress: function () {
+        MessageToast.show("Button pressed!");
+      },
     });
-});
+  },
+);
